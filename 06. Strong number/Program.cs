@@ -1,4 +1,5 @@
-﻿int num = int.Parse(Console.ReadLine());
+﻿// See https://aka.ms/new-console-template for more information
+int num = int.Parse(Console.ReadLine());
 int[] numArr = num.ToString().ToCharArray().Select(x => (int)Char.GetNumericValue(x)).ToArray();
 int sumOfFactorials = 0;
 
