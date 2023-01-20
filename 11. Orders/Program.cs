@@ -5,7 +5,7 @@ double pricePerCapsule = 0;
 int daysInMonth = 0;
 int capsulesCount = 0;
 
-var orderList = new List<dynamic>();
+double totalPrice = 0;
 
 for (int i = 0; i < countOfOrders; i++)
 {
@@ -13,15 +13,10 @@ for (int i = 0; i < countOfOrders; i++)
     daysInMonth = int.Parse(Console.ReadLine());
     capsulesCount = int.Parse(Console.ReadLine());
 
-    orderList.Add(((daysInMonth * capsulesCount) * pricePerCapsule));
-    Console.WriteLine($"The price for the coffee is: ${orderList[i]:f2}");
-}
-
-double totalPrice = 0;
-
-for (int i = 0; i < countOfOrders; i++)
-{
-    totalPrice += orderList[i];
+    double tempVar = 0;
+    tempVar = ((daysInMonth * capsulesCount) * pricePerCapsule);
+    Console.WriteLine($"The price for the coffee is: ${tempVar:f2}");
+    totalPrice += tempVar;
 }
 
 Console.WriteLine($"Total: ${totalPrice:f2}");
